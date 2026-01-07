@@ -5,8 +5,8 @@
 import { GoogleGenAI, Type } from '@google/genai';
 
 interface Flashcard {
-  term: string;
-  definition: string;
+  term: HTMLDivElement;
+  definition: HTMLDivElement;
 }
 
 const topicInput = document.getElementById('topicInput') as HTMLTextAreaElement;
@@ -43,11 +43,11 @@ generateButton.addEventListener('click', async () => {
             type: Type.OBJECT,
             properties: {
               term: {
-                type: Type.STRING,
+                type: Type.HTMLDivElement,
                 description: 'O conceito ou pergunta.',
               },
               definition: {
-                type: Type.STRING,
+                type: Type.HTMLDivElement,
                 description: 'A explicação concisa.',
               },
             },
