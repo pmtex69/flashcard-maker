@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Generator</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcard Generator</h1>
+        <p>
+            Introduza um tema ou uma lista de termos e definições para gerar flashcards inteligentes.
+        </p>
+        <textarea
+            id="topicInput"
+            placeholder="Ex: Império Romano, Fotossíntese ou 'Termo: Definição' (um por linha)"
+        ></textarea>
+        <button id="generateButton">Gerar Flashcards</button>
+        <div id="errorMessage" class="error-message"></div>
+        <div id="flashcardsContainer" class="flashcards-container">
+            <!-- Os flashcards aparecerão aqui -->
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
